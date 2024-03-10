@@ -1,6 +1,6 @@
 # Troubleshooting guide for Lolin 32
 
-1. It doesn’t connect to the computer: 
+## It doesn’t connect to the computer:
 
 - Is the USB cable able to send DATA or only power?  You must use a DATA cable
 - Maybe the cable is too long?
@@ -24,39 +24,44 @@ Besides the board manager the ESP may need a Driver:
 
 If you soldered the ESP, check if there’s some soldering shortcutting the components. 
 
-1. The ESP looks connected but it doesn’t upload the code (Failed uploading: uploading error: exit status 2)
+## The ESP looks connected but it doesn’t upload the code (Failed uploading: uploading error: exit status 2)
+
 - Try changing the Uploadspeed in TOOLS menu to 115200
 
-1. **Error : C:\\Users\\ User\\Documents \\Arduino\\ 
+## **Error : C:\\Users\\ User\\Documents \\Arduino\\ 
 hardware\\ espressif\\ esp32/tools /xtensa-esp32-elf /bin/ xtensa-esp32-
  elf-g++”: file does not exist**
 
 - This happens when there are multiple Arduino IDE versions installed. Make sure you are running the Arduino IDE where you installed the ESP32 add-on.
 
-1. **Error "bad CPU type in executable" on macOS**
-    - You may need to install Rosetta: 
-    [https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS](https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS)
+## **Error "bad CPU type in executable" on macOS**
+
+- You may need to install Rosetta: 
+[https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS](https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS)
 
 ---
 
-Issues with the sketches:
+## Issues with the sketches:
 
-It doens’t upload: 
+### It doens’t upload:
 
 - Try changing the Uploadspeed in TOOLS menu to 115200 (again)
 
-1. The led doesn’t blink… 
-    - Check the connections in the protoboard!
-    - Are you using the correct pin? Not all the ESP have the same connections, check the name of your ESP and look for the **PINOUT** picture:
-        - Lolin D32:  [https://mischianti.org/esp32-wemos-lolin-d32-high-resolution-pinout-and-specs/](https://mischianti.org/esp32-wemos-lolin-d32-high-resolution-pinout-and-specs/)
-        - Lolin 32 Lite: [https://mischianti.org/esp32-wemos-lolin32-lite-high-resolution-pinout-and-specs/](https://mischianti.org/esp32-wemos-lolin32-lite-high-resolution-pinout-and-specs/)
-    - Try another GND output
-2. I only see weird characters in the monitor: 
-    - You must change the baud rate in the Serial Monitor to match the code: 115200
+### The led doesn’t blink…
+
+- Check the connections in the protoboard!
+- Are you using the correct pin? Not all the ESP have the same connections, check the name of your ESP and look for the **PINOUT** picture:
+    - Lolin D32:  [https://mischianti.org/esp32-wemos-lolin-d32-high-resolution-pinout-and-specs/](https://mischianti.org/esp32-wemos-lolin-d32-high-resolution-pinout-and-specs/)
+    - Lolin 32 Lite: [https://mischianti.org/esp32-wemos-lolin32-lite-high-resolution-pinout-and-specs/](https://mischianti.org/esp32-wemos-lolin32-lite-high-resolution-pinout-and-specs/)
+- Try another GND output
+
+### I only see weird characters in the monitor:
+
+- You must change the baud rate in the Serial Monitor to match the code: 115200
 
 ---
 
-Useful info. 
+### Useful info.
 
 Lolin D32 changes between boards
 
