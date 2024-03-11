@@ -13,9 +13,9 @@ Some issues and possible solutions for connecting and uploading sketches in LOLI
         Be sure you have the last version of the URL that you paste in the arduino preferences: [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
         
     
-    Usually this install everything you need to make it work, you must allow arduino to install drivers, etc.
+        Usually this install everything you need to make it work, you must allow arduino to install drivers, etc.
     
-    - With some windows you may need to install the manually
+    - With some windows you may need to install it manually
     [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
 
 Besides the board manager the ESP may need a Driver:  
