@@ -1,5 +1,7 @@
 # Troubleshooting guide for Lolin 32
 
+Some issues and possible solutions for connecting and uploading sketches in LOLIN 32
+
 ## It doesn’t connect to the computer:
 
 - Is the USB cable able to send DATA or only power?  You must use a DATA cable
