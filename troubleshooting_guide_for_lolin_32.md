@@ -15,10 +15,11 @@ Some issues and possible solutions for connecting and uploading sketches in LOLI
     
         Usually this install everything you need to make it work, you must allow arduino to install drivers, etc.
     
-    - With some windows you may need to install it manually
+- With some windows you may need to install it manually
     [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
 
-Besides the board manager the ESP may need a Driver:  
+
+  Besides the board manager the ESP may need a Driver:  
 
 - For Mac OSX 10.14 and greater, do not install any supplimentary drivers!
 
@@ -36,7 +37,7 @@ hardware\\ espressif\\ esp32/tools /xtensa-esp32-elf /bin/ xtensa-esp32-
 
 - This happens when there are multiple Arduino IDE versions installed. Make sure you are running the Arduino IDE where you installed the ESP32 add-on.
 
-## **Error "bad CPU type in executable" on macOS**
+## Error "bad CPU type in executable" on macOS
 
 - You may need to install Rosetta: 
 [https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS](https://support.arduino.cc/hc/en-us/articles/7765785712156-Error-bad-CPU-type-in-executable-on-macOS)
