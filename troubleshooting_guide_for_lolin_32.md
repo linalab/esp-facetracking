@@ -19,9 +19,9 @@ Some issues and possible solutions for connecting and uploading sketches in LOLI
     [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
 
 
-  Besides the board manager the ESP may need a Driver:  
+- Besides the board manager the ESP may need a Driver:  
 
-- For Mac OSX 10.14 and greater, do not install any supplimentary drivers!
+ For Mac OSX 10.14 and greater, do not install any supplimentary drivers!
 
 [https://www.wemos.cc/en/latest/ch340_driver.html](https://www.wemos.cc/en/latest/ch340_driver.html)
 
