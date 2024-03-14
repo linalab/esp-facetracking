@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 100.0, 444.0, 376.0 ],
+		"rect" : [ 274.0, 233.0, 444.0, 376.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -106,8 +106,8 @@
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 451.0, 767.0, 165.0, 22.0 ],
-					"text" : "udpsend 192.168.1.255 6448"
+					"patching_rect" : [ 451.0, 767.0, 135.0, 22.0 ],
+					"text" : "udpsend localhost 6448"
 				}
 
 			}
@@ -465,21 +465,21 @@
 		"dependency_cache" : [ 			{
 				"name" : "copyright-jmp.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/help",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/help",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/help",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.input.chooser.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers/utils",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers/utils",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/patchers/utils",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "cv.jit.face.landmarks.draw.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -490,7 +490,7 @@
 , 			{
 				"name" : "cv.jit.face.parts.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -501,7 +501,7 @@
 , 			{
 				"name" : "cv.jit.iter.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/patchers",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
@@ -514,7 +514,7 @@
 , 			{
 				"name" : "lbfmodel.yaml.map",
 				"bootpath" : "~/Documents/Max 8/Packages/cv.jit/misc",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/cv.jit/misc",
+				"patcherrelativepath" : "../../../../../../../../Documents/Max 8/Packages/cv.jit/misc",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
