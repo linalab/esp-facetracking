@@ -14,7 +14,7 @@ This guide will show you all the steps to use Face Tracking to control a neopixe
 
 
 
- ## FaceTracking max patch
+ ### FaceTracking max patch
  Receives the camera and sends OSC messages with face tracking data
  
 - Download MAX-MSP: https://cycling74.com/downloads
