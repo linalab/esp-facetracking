@@ -7,3 +7,5 @@ Face tracking steps:
 - Run facetracking.maxpat
 
 The patch sends OSC messagges using the port 6448
+
+
