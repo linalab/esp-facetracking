@@ -6,7 +6,7 @@ This guide will show you all the steps to use Face Tracking to control a neopixe
 
 2. OBS: convert the signal from the camera into a video source
 
-3. FaceTracking max patch: Receives the camera and sends OSC messages with face tracking data](#-FaceTracking-max-patch)
+[3. FaceTracking max patch: Receives the camera and sends OSC messages with face tracking data](#-FaceTracking-max-patch)
 
 4. Wekinator: Receives the OSC messages and trains a model to detect gestures
 
@@ -15,7 +15,7 @@ This guide will show you all the steps to use Face Tracking to control a neopixe
 
 
  ## FaceTracking max patch
-      Receives the camera and sends OSC messages with face tracking data
+ Receives the camera and sends OSC messages with face tracking data
  
 - Download MAX-MSP: https://cycling74.com/downloads
 - Install cv.jit in the Package manager
