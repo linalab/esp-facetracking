@@ -1,10 +1,11 @@
 
-OSC Send:
+# Examples of send and receive OSC messages
 
 
+## OSC Send:
 
-OSC receive:
 
+## OSC receive:
 
 [processing_osc_receiver.pde](processing_osc_receiver.pde) Processing file that receives tow messages:
    /filter f
