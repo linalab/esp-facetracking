@@ -3,7 +3,7 @@
 
 
 ## OSC Send:
-
+[osc-python.py](osc-python.py) Python sends OSC
 
 ## OSC receive:
 
