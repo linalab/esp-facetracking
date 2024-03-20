@@ -22,6 +22,6 @@ This guide will show you all the steps to use Face Tracking to control a neopixe
 - Install cv.jit in the Package manager
 - Run facetracking.maxpat
 
-The patch sends OSC messagges using the port 6448
+The patch sends OSC messagges using the port 6448 
 
 
