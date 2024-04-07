@@ -1,65 +1,98 @@
-This guide will show you all the steps to use Face Tracking to control a neopixel matrix. 
+This guide will show you  the steps to use Face Tracking with open CV in Max , train basic models in wekinator and control a neopixel matrix to show a happy/sad face.
 
 # Steps
 
-1. Input: XIAO ESPS3 Camera and touch
+1. Input: XIAO ESPS3 Camera and touch 
 
 2. OBS: convert the signal from the camera into a video source
 
-[3. FaceTracking max patch: Receives the camera and sends OSC messages with face tracking data](#facetracking-max-patch)
+3. FaceTracking max patch: Receives the camera and sends OSC messages with face tracking data
 
 4. Wekinator: Receives the OSC messages and trains a model to detect gestures
 
 5. OUTPUT: ESP32 receives OSC messages from Max and controls a Neopixel Matrix
 
-#
-#
+
+
 ---
 
- ### FaceTracking max patch
+
+### 1. Input: XIAO ESPS3 Camera and touch 
+
+
+    The Seeeduino XIAO ESP32S3 Sense board actually consists of two separate boards: 
+    
+    1. The Seeeduino XIAO ESP32S3 board. This board is also available separately. It includes the microcontroller, two LEDs, a USB-C connector, and two of the smallest pushbutton switches you have ever seen!
+    
+    2. The Camera module. This plugs into the top of the XIAO board. Along with the camera, it includes a microphone and a MicroSD card holder.
+
+- Connect the Xiao ESPS3, this board is included in the ESP32 Boards Manager.    
+
+- Use the “Hello World” of ESP32-based cameras is the CameraWebServer sketch. It is included in the Examples files packaged with the ESP32 boards manager, under the WiFi section_
+
+    - The camera type needs to be CAMERA_MODEL_XIAO_ESP32S3.  This model needs to be included in your camera_pins.h file.
+    - You need to setup your SSID and Password for your WiFi network. 
+
+
+- In the monitor serial you will see a IP address, copy the IP adress, we'll use it in OBS.
+
+---
+### 2. OBS: convert the signal from the camera into a video source
+
+
+- [Install OBS](https://obsproject.com/) 
+- Use a Browser source, paste the IP adress, you should see the CameraWebServer main screen. 
+- start the virtual camera
+
+___
+
+
+### 3. FaceTracking max patch: Receives the camera and sends OSC messages with face tracking data
+
+ FaceTracking max patch
  Receives the camera and sends OSC messages with face tracking data
  
-- Download MAX-MSP: https://cycling74.com/downloads
+- [Install MAX-MSP](https://cycling74.com/downloads): 
 - Install cv.jit in the Package manager
-- Run facetracking.maxpat
+- Open **facetracking.maxpat**
+- Use the OBS camera as a source
+
 
 The patch sends OSC messagges using the port 6448 to wekinator and revceive them back in port 12000
 
 sends OSC messages to the ESP in port 8000
 
-[facetracking.maxpat]()
 
+### 4. Wekinator: Receives the OSC messages and trains a model to detect gestures
 
----
+- [Install wekinator](http://www.wekinator.org/)
+- Open the **WekinatorProject**
+- Train the model with happy/sad faces
+- Run 
 
-### Wekinator setup: 
 Wekinator receives the face tracking data from MAX through OSC.
 
 - Input port: 6448
-- OSC message /raw 
+- OSC message /wek/inputs
 - #inputs 66
 
 And sends the trained model to MAX again 
 
-- OSC message /wek 
+- OSC message /wek/outputs
 - #outputs 1 
 - Host IP: localhost
 - Port: 12000
 
-[WekinatorProject/WekinatorProject.wekproj]()
-
 ---
 
-### ESP32 receives OSC messages
+### 5. ESP32 receives OSC messages
 
-It expects OSC messages in port 8000 
-
-
-1.  happy face
-2.  sad face
-
+- Connect the ESP with neopixel matrix in GPIO 5, GND and 3.3v
+- In the sketch you need to setup your SSID and Password for your WiFi network. 
+- The code uses Fastled library for neopixel, and OSC, you must install the libraries first. 
+- Load the sketch **esp32_receive_osc_from_max.ino**
 
 
-The code uses Fastled library for neopixel, and OSC. 
+It expects OSC messages in port 8000 (from max)
+The code uses Fastled library for neopixel, and OSC. It shows a happy face when receives a 1. or a sad face when receives a 2.
 
-[esp32_receive_osc_from_max.ino]()
