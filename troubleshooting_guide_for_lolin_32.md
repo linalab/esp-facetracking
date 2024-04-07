@@ -11,21 +11,14 @@ Some issues and possible solutions for connecting and uploading sketches in LOLI
     [https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)
         
         Be sure you have the last version of the URL that you paste in the arduino preferences: [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
-        
-    
         Usually this install everything you need to make it work, you must allow arduino to install drivers, etc.
-    
-- With some windows you may need to install it manually
-    [https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
 
-
-- Besides the board manager the ESP may need a Driver:  
-
- For Mac OSX 10.14 and greater, do not install any supplimentary drivers!
+- In Windows and old Mac, besides the board manager the ESP may need a Driver:  
+ (For Mac OSX 10.14 and greater, do not install any supplimentary drivers!)
 
 [https://www.wemos.cc/en/latest/ch340_driver.html](https://www.wemos.cc/en/latest/ch340_driver.html)
 
-If you soldered the ESP, check if there’s some soldering shortcutting the components. 
+- If you soldered the ESP, check if there’s some soldering shortcutting the components. 
 
 ## The ESP looks connected but it doesn’t upload the code (Failed uploading: uploading error: exit status 2)
 
