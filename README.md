@@ -85,7 +85,8 @@ And sends the trained model to MAX again
     - Type Numeric with integer ouputs
     - in min/max,configure the number of states for your project (happy/sad) 
     
-<img width="670" alt="wekinator_config" src="https://github.com/linalab/esp-facetracking/assets/19651027/ee574dc4-8036-47d1-a1a1-4f3ab7a9e2a6">
+<img width="671" alt="wek_config" src="https://github.com/linalab/esp-facetracking/assets/19651027/4cded37c-af65-4d74-adda-4f377ab21cc2">
+
 
 
 ---
