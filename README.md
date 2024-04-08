@@ -26,15 +26,14 @@ This guide will show you  the steps to use Face Tracking with open CV in Max , t
     
     2. The Camera module. This plugs into the top of the XIAO board. Along with the camera, it includes a microphone and a MicroSD card holder.
 
-- Connect the Xiao ESPS3, this board is included in the ESP32 Boards Manager.    
+- Connect the Xiao ESPS3, this board is included in the [ESP32 Boards Manager](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html).    
 
-- Use the “Hello World” of ESP32-based cameras is the CameraWebServer sketch. It is included in the Examples files packaged with the ESP32 boards manager, under the WiFi section_
+- In Arduino, go to File -> Examples -> ESP32 -> Camera -> CameraWebServer
 
-    - The camera type needs to be CAMERA_MODEL_XIAO_ESP32S3.  This model needs to be included in your camera_pins.h file.
+    Before Uploading the code, follow the next steps: 
+    - Comment the line 17: #define CAMERA_MODEL_ESP_EYE // Has PSRAM and un comment the line 26: #define CAMERA_MODEL_XIAO_ESP32S3 // Has PSRAM
     - You need to setup your SSID and Password for your WiFi network. 
-
-
-- In the monitor serial you will see a IP address, copy the IP adress, we'll use it in OBS.
+    After uploading the code, open the monitor serial. You will see a IP address, copy the IP adress, we'll use it in OBS. (Or paste it on your browser to verify but be sure to close the browser to make tha camera available for OBS). 
 
 ---
 ### 2. OBS: convert the signal from the camera into a video source
@@ -55,18 +54,16 @@ ___
 - [Install MAX-MSP](https://cycling74.com/downloads): 
 - Install cv.jit in the Package manager
 - Open **facetracking.maxpat**
-- Use the OBS camera as a source
+- Use the OBS camera as a source: choose OBS Virtual camera.
 
+By default the patch sends OSC messagges using the port 6448 to wekinator. Max also revceives them back from Wekinator using port 12000.
+Finally sends clean OSC messages to the ESP in port 8000. 
 
-The patch sends OSC messagges using the port 6448 to wekinator and revceive them back in port 12000
-
-sends OSC messages to the ESP in port 8000
-
+---
 
 ### 4. Wekinator: Receives the OSC messages and trains a model to detect gestures
 
 - [Install wekinator](http://www.wekinator.org/)
-- Open the **WekinatorProject**
 - Train the model with happy/sad faces
 - Run 
 
@@ -83,14 +80,24 @@ And sends the trained model to MAX again
 - Host IP: localhost
 - Port: 12000
 
+- Type: Custom and click in configure. 
+    - Name: outputs
+    - Type Numeric with integer ouputs
+    - in min/max,configure the number of states for your project (happy/sad) 
+    
+
+
+
 ---
 
 ### 5. ESP32 receives OSC messages
 
-- Connect the ESP with neopixel matrix in GPIO 5, GND and 3.3v
+- Connect the ESP with neopixel matrix in GPIO 5, GND and 3.3v.
+- Select your ESP board (WEMOS LOLIN32, LOLIN32, etc. Change the speed if needed to 115200).
 - In the sketch you need to setup your SSID and Password for your WiFi network. 
-- The code uses Fastled library for neopixel, and OSC, you must install the libraries first. 
-- Load the sketch **esp32_receive_osc_from_max.ino**
+- The code uses Fastled library for neopixel by Daniel Garcia, and OSC by Adrian Freed, you must install the libraries first from Arduino. 
+- Upload the sketch **esp32_receive_osc_from_max.ino** to your ESP.
+- Go to monitor serial and copy the IP adress from the ESP.
 
 
 It expects OSC messages in port 8000 (from max)
