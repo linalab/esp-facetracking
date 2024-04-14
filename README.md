@@ -41,7 +41,14 @@ This guide will show you  the steps to use Face Tracking with open CV in Max , t
 
 - [Install OBS](https://obsproject.com/) 
 - Use a Browser source, paste the IP adress, you should see the CameraWebServer main screen. 
+
+**For Mac:**
 - start the virtual camera
+
+**For Windows:**
+We're gonna use another way of send video signals internally, is called SPOUT, for that we'll need: 
+- Download and install this plug-in for OBS: https://github.com/Off-World-Live/obs-spout2-plugin/releases 
+- Close and open again OBS. To start Spout go to TOOLS -> Spout Output settings and click Start. 
 
 ___
 
@@ -53,8 +60,15 @@ ___
  
 - [Install MAX-MSP](https://cycling74.com/downloads): 
 - Install cv.jit in the Package manager
+
+**For Mac:**
 - Open **facetracking.maxpat**
 - Use the OBS camera as a source: choose OBS Virtual camera.
+
+**For Windows:**
+- Open **facetracking-win.maxpat**
+___
+
 
 By default the patch sends OSC messagges using the port 6448 to wekinator. Max also revceives them back from Wekinator using port 12000.
 Finally sends clean OSC messages to the ESP in port 8000. 
@@ -83,7 +97,7 @@ And sends the trained model to MAX again
 - Type: Custom and click in configure. 
     - Name: outputs
     - Type Numeric with integer ouputs
-    - in min/max,configure the number of states for your project (happy/sad) 
+    - in max value , add the number of states for your project(for example 3 for happy, sad, neutral).
     
 <img width="671" alt="wek_config" src="https://github.com/linalab/esp-facetracking/assets/19651027/4cded37c-af65-4d74-adda-4f377ab21cc2">
 
