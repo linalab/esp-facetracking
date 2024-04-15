@@ -37,7 +37,7 @@ void setup() {
 
   Serial.begin(115200);
 
-  pinMode(5, OUTPUT);  // led pin
+  pinMode(led, OUTPUT);  // led pin
 
   // Connect to WiFi network
   Serial.println();
