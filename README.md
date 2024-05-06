@@ -12,7 +12,10 @@ This guide will show you  the steps to use Face Tracking with open CV in Max , t
 
 5. OUTPUT: ESP32 receives OSC messages from Max and controls a Neopixel Matrix
 
+# Materials Needed
 
+1. ESP32 board (WEMOS Lolin 32 Lite) (https://www.az-delivery.de/es/products/esp32-lolin-lolin32)
+2. XIAO ESP32S3 Camera Module (https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/)
 
 ---
 
